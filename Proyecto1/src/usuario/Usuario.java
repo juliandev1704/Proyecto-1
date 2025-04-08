@@ -24,5 +24,7 @@ public abstract class Usuario{
 			number += (int)userName.charAt(i);
 		}
 		int hash = (int)number%10000;
+		String result = Integer.toString(hash);
+		return result;
 	}
 }
