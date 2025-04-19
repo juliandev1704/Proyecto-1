@@ -18,7 +18,7 @@ public abstract class Usuario{
 	public boolean autenticar(String passwordIngresada) {
 		return this.password.equals(passwordIngresada);
 	}
-	private String userHash(String userName) {
+	protected String userHash(String userName) {
 		double number = 0;
 		for (int i=0; i<userName.length(); i++) {
 			number += (int)userName.charAt(i);
