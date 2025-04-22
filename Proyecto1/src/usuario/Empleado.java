@@ -5,33 +5,34 @@ import java.util.ArrayList;
 import java.util.List;
 import atraccion.Turno;
 
-public class Empleado extends Usuario{
-	private List<String> roles;
-	private List<Turno> turnos;
-	private String id;
-	public Empleado(String userName, String password, String nombre, String year, String month) {
-		super(userName, password, nombre);
-		this.roles = new ArrayList<>();
-		this.turnos = new ArrayList<Turno>();
-		id = year + month + super.userHash(userName);
-	}
-	public void addRol(String newRol) {
-		roles.add(newRol);
-	}
-	public void addTurno(String newCapacitacion) {
-		turnos.add(newCapacitacion);
-	}
-	public List<String> getRoles(){
-		return roles;
-	}
-	public List<String> getCapacitaciones(){
-		return capacitaciones;
-	}
-	public String getUserId() {
-		return id;
-	}
-	public boolean accesoAtraccion(Atraccion atraccion) {
-		String capacitacionPrevia = atraccion.getCapacitacionPrevia();
-		return capacitaciones.contains(capacitacionPrevia);
-	}
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cliente extends Usuario {
+
+    private List<Tiquete> tiquetes;
+
+    public Cliente(String userName, String password, String correo) {
+        super(userName, password, correo);
+        this.tiquetes = new ArrayList<>();
+    }
+
+    public List<Tiquete> getTiquetes() {
+        return new ArrayList<>(tiquetes);
+    }
+
+    public void agregarTiquete(Tiquete nuevoTiquete) {
+        if (nuevoTiquete != null) {
+            this.tiquetes.add(nuevoTiquete);
+        }
+    }
+
+    public void comprarTiquete(Tiquete tiquete /*, SistemaVentas sistemaVentas */) {
+        System.out.println("Cliente " + super.getUserName() + " comprando tiquete: " + tiquete);
+        agregarTiquete(tiquete);
+    }
+
+    public String toString() {
+         return "Cliente [User: " + getUserName() + ", Correo: " + super.getCorreo() + ", Tiquetes: " + tiquetes.size() + "]";
+    }
 }
