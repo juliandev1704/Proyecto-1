@@ -1,18 +1,18 @@
+package usuario;
 import atracciones.Turno;
-import usuario.Empleado;
 
-public class Admin extends UsuarioSistema {
+public class Admin extends Usuario {
 
     public Admin(String userName, String password, String correo) {
         super(userName, password, correo);
     }
 
     public void crearNuevaAtraccion(/*..., ParqueDiversiones parque*/) {
-        System.out.println("Admin " + empleado.getUserName() + " está creando una atracción...");
+        System.out.println("Admin " + super.getUserName() + " está creando una atracción...");
     }
 
     public void asignarTurnoAEmpleado(Empleado empleado, Turno turno /*, ParqueDiversiones parque*/) {
-        System.out.println("Admin " + empleado.getUserName() + " asignando turno a " + empleado.getUserName());
+        System.out.println("Admin " + super.getUserName() + " asignando turno a " + super.getUserName());
         empleado.agregarTurno(turno);
     }
 
@@ -21,6 +21,6 @@ public class Admin extends UsuarioSistema {
     }
 
     public String toString() {
-        return "Admin [User: " + empleado.getUserName() + ", Correo: " + empleado.getCorreo() + "]";
+        return "Admin [User: " + super.getUserName() + ", Correo: " + super.getUserName() + "]";
     }
 }

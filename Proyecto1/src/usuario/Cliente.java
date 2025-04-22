@@ -1,9 +1,5 @@
 package usuario;
-import usuario.Usuario;
-import tiquetes.tiquete;
-import java.util.ArrayList;
-import tiquetes.tiquete;
-
+import tiquetes.Tiquete;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,13 +22,13 @@ public class Cliente extends Usuario {
         }
     }
 
-    public void comprarTiquete(Tiquete tiquete) {
+    public void comprarTiquete(Tiquete tiquete /*, SistemaVentas sistemaVentas */) {
         System.out.println("Cliente " + getUserName() + " comprando tiquete: " + tiquete);
         agregarTiquete(tiquete);
     }
 
     @Override
     public String toString() {
-         return "Cliente [User: " + getUserName() + ", Correo: " + getCorreo() + ", Tiquetes: " + tiquetes.size() + "]";
+         return "Cliente [User: " + getUserName()  + ", Tiquetes: " + tiquetes.size() + "]";
     }
 }

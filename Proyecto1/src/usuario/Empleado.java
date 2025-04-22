@@ -1,38 +1,54 @@
 package usuario;
-import usuario.Usuario;
-import atraccion.Atraccion;
-import java.util.ArrayList;
-import java.util.List;
-import atraccion.Turno;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Usuario {
+import atracciones.Turno;
 
-    private List<Tiquete> tiquetes;
+public class Empleado extends Usuario {
 
-    public Cliente(String userName, String password, String correo) {
+    private String calificaciones;
+    private String rol;
+    private List<Turno> turnos;
+
+    public Empleado(String userName, String password, String correo, String calificaciones, String rol) {
         super(userName, password, correo);
-        this.tiquetes = new ArrayList<>();
+        this.calificaciones = calificaciones;
+        this.rol = rol;
+        this.turnos = new ArrayList<>();
     }
 
-    public List<Tiquete> getTiquetes() {
-        return new ArrayList<>(tiquetes);
+    public String getCalificaciones() {
+        return calificaciones;
     }
 
-    public void agregarTiquete(Tiquete nuevoTiquete) {
-        if (nuevoTiquete != null) {
-            this.tiquetes.add(nuevoTiquete);
+    public void setCalificaciones(String calificaciones) {
+        this.calificaciones = calificaciones;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public List<Turno> getTurnos() {
+        return new ArrayList<>(turnos);
+    }
+
+    public void agregarTurno(Turno nuevoTurno) {
+        if (nuevoTurno != null) {
+            this.turnos.add(nuevoTurno);
         }
     }
 
-    public void comprarTiquete(Tiquete tiquete /*, SistemaVentas sistemaVentas */) {
-        System.out.println("Cliente " + super.getUserName() + " comprando tiquete: " + tiquete);
-        agregarTiquete(tiquete);
+    public boolean eliminarTurno(Turno turnoAEliminar) {
+       return this.turnos.remove(turnoAEliminar);
     }
 
+    @Override
     public String toString() {
-         return "Cliente [User: " + getUserName() + ", Correo: " + super.getCorreo() + ", Tiquetes: " + tiquetes.size() + "]";
+        return "Empleado [User: " + getUserName() + ", Rol: " + rol ;
     }
 }
