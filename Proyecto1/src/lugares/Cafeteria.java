@@ -26,7 +26,7 @@ public class Cafeteria extends LugarServicio {
         if (!suficientesCajeros) return false;
 
         long countCocineros = getEmpleadosAsignados().stream()
-                                  .filter(e -> e != null && e.puedeSerCocinero()) 
+                                  .filter(e -> e != null && e.getRol()=="Cocinero" ) 
                                   .count();
         return countCocineros >= this.minCocineros;
     }
