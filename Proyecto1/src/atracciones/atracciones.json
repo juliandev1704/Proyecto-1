@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ACULT001",
+    "tipo": "CULTURAL",
+    "nombre": "Espectáculo de Mascotas",
+    "ubicacion": "Zona C",
+    "cupoMaximo": 100,
+    "empleadosMinimos": 2,
+    "restricciones": {
+      "edadMinima": 5
+    },
+    "nivelExclusividad": "FAMILIAR",
+    "climaRestringido": ["TORMENTAS"]
+  },
+  {
+    "id": "AMEC001",
+    "tipo": "MECANICA",
+    "nombre": "Montaña Rusa Extrema",
+    "ubicacion": "Zona A",
+    "cupoMaximo": 30,
+    "empleadosMinimos": 4,
+    "restricciones": {
+      "alturaMinima": 1.4,
+      "pesoMaximo": 100,
+      "contraindicaciones": ["problemas cardiacos"]
+    },
+    "nivelRiesgo": "ALTO",
+    "nivelExclusividad": "DIAMANTE"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "T001",
+    "tipo": "GENERAL",
+    "precio": 15.0,
+    "clienteId": "C001",
+    "utilizado": false
+  },
+  {
+    "id": "T002",
+    "tipo": "INDIVIDUAL",
+    "atraccionId": "AMEC001",
+    "precio": 25.0,
+    "fechaUso": "2023-10-10",
+    "clienteId": "C002"
+  },
+  {
+    "id": "T003",
+    "tipo": "TEMPORADA",
+    "categoria": "ORO",
+    "fechaInicio": "2023-11-01",
+    "fechaFin": "2023-11-30",
+    "precio": 120.0,
+    "clienteId": "C003"
+  },
+  {
+    "id": "FP001",
+    "tipo": "FASTPASS",
+    "tiqueteId": "T002",
+    "precioAdicional": 10.0,
+    "fechaUso": "2023-10-10"
+  }
+]

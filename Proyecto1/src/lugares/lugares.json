@@ -1,0 +1,20 @@
+[
+    {
+      "id": "CAFE1",
+      "tipo": "CAFETERIA",
+      "nombre": "Cafetería Central",
+      "empleadosAsignados": ["E001"]
+    },
+    {
+      "id": "TAQUILLA1",
+      "tipo": "TAQUILLA",
+      "nombre": "Taquilla Principal",
+      "empleadosAsignados": ["E001"]
+    },
+    {
+        "id": "TIENDA1",
+        "tipo": "TIENDA",
+        "nombre": "Tienda Principal",
+        "empleadosAsignados": ["E001"]
+      }
+  ]

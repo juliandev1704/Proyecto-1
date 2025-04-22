@@ -1,12 +1,11 @@
 package parque;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 
 import atracciones.Atraccion;
 import atracciones.Espectaculo;
-import tiquetes.tiquete;
+import tiquetes.Tiquete;
 import usuario.Usuario;
 
 public class Parque {
@@ -15,10 +14,10 @@ public class Parque {
 	private final Map<String, Atraccion> atracciones;
     private final Map<String, Espectaculo> espectaculos;
     private final Map<String, Usuario> usuarios;
-    private Map<String, tiquete> tiquetes;
+    private Map<String, Tiquete> tiquetes;
     
 	public Parque(Map<String, Atraccion> atracciones, Map<String, Espectaculo> espectaculos,
-			Map<String, Usuario> usuarios, Map<String, tiquete> tiquetes) {
+			Map<String, Usuario> usuarios, Map<String, Tiquete> tiquetes) {
 		super();
 		this.atracciones = atracciones;
 		this.espectaculos = espectaculos;
@@ -51,7 +50,7 @@ public class Parque {
 	    {
 	        return this.espectaculos.containsKey( userName );
 	    }
-	 public boolean existeTiquete( String user ) //Fata identificador tiquete 
+	 public boolean existeTiquete( String user )  
 	    {
 	        return this.espectaculos.containsKey( user );
 	    }
@@ -70,7 +69,7 @@ public class Parque {
 	    {
 	        return this.usuarios.get( userNombre );
 	    }
-	 public tiquete getTiquete( String user )
+	 public Tiquete getTiquete( String user )
 	    {
 	        return this.tiquetes.get( user );
 	    }
@@ -88,7 +87,7 @@ public class Parque {
 	    {
 	        return usuarios.values( );
 	    }
-	 public Collection<tiquete> getTiquetes( )
+	 public Collection<Tiquete> getTiquetes( )
 	    {
 	        return tiquetes.values( );
 	    }

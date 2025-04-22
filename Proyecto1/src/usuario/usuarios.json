@@ -1,0 +1,23 @@
+[
+  {
+    "id": "U001",
+    "username": "admin",
+    "password": "hashed_admin_pass",
+    "rol": "ADMIN",
+    "privilegios": ["GESTION_ATRACCIONES", "ASIGNAR_TURNOS"]
+  },
+  {
+    "id": "U002",
+    "username": "cliente1",
+    "password": "hashed_cliente_pass",
+    "rol": "CLIENTE",
+    "tiquetesComprados": ["T001", "T002"]
+  },
+  {
+    "id": "U003",
+    "username": "empleado1",
+    "password": "hashed_empleado_pass",
+    "rol": "EMPLEADO",
+    "empleadoId": "E001"
+  }
+]
