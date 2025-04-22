@@ -64,7 +64,7 @@ public abstract class LugarServicio implements LugarTrabajo {
 
    public boolean tienePersonalSuficiente() {
        long countCajeros = this.empleadosAsignados.stream()
-                               .filter(e -> e != null && e.puedeSerCajero()) // Asumiendo que Empleado tiene un método así
+                               .filter(e -> e != null && e.getRol()=="Cajero") // Asumiendo que Empleado tiene un método así
                                .count();
        return countCajeros >= this.minCajeros;
    }
