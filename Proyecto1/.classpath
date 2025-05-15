@@ -8,5 +8,10 @@
 	<classpathentry excluding="Parque/|mundo/|tests/|consola/" kind="src" path="src"/>
 	<classpathentry kind="src" path="src/mundo"/>
 	<classpathentry kind="src" path="src/tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

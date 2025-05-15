@@ -6,23 +6,22 @@ import atracciones.Turno;
 
 public class Empleado extends Usuario {
 
-    private String calificaciones;
+    private ArrayList<String> capacitaciones;
     private String rol;
     private List<Turno> turnos;
 
-    public Empleado(String userName, String password, String correo, String calificaciones, String rol) {
+    public Empleado(String userName, String password, String correo, String rol) {
         super(userName, password, correo);
-        this.calificaciones = calificaciones;
         this.rol = rol;
         this.turnos = new ArrayList<>();
     }
 
-    public String getCalificaciones() {
-        return calificaciones;
+    public ArrayList<String> getCapacitaciones() {
+        return capacitaciones;
     }
 
-    public void setCalificaciones(String calificaciones) {
-        this.calificaciones = calificaciones;
+    public void addCapacitaciones(String capacitacion) {
+        capacitaciones.add(capacitacion);
     }
 
     public String getRol() {
