@@ -1,4 +1,4 @@
 Estudiantes:
 Sebastian Martinez
 Sara Hernandez
-Julian Forero
+Julian Camilo Forero
